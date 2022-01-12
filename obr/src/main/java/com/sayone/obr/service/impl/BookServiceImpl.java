@@ -101,6 +101,8 @@ public class BookServiceImpl implements BookService {
             throw new IllegalStateException("No book found to upload..");
         }
         else {
+
+            //Should specify the local path where you upload your book
             String path = "/home/sayone/Documents/Projects/OBR/obrnew/obr/BookUpload/" + bookId + ".pdf";
             file.transferTo(new File(path));
             findUpload.setBookLink(path);
